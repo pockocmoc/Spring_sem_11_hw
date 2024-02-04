@@ -5,6 +5,9 @@ import lombok.Data;
 
 import java.time.LocalDateTime;
 
+/**
+ * Модель задачи.
+ */
 @Data
 @Entity
 @Table(name = "tasks")
@@ -21,6 +24,9 @@ public class Task {
     @Column(name = "creation_time", nullable = true)
     private LocalDateTime creationTime;
 
+    /**
+     * Метод для установки времени создания задачи перед сохранением в базу данных.
+     */
     @PrePersist
     public void setCreationTime() {
         this.creationTime = LocalDateTime.now();

@@ -23,7 +23,7 @@ public class TaskController {
      * @return список всех задач
      */
     @GetMapping()
-    public List<Task> getAllBook() {
+    public List<Task> getAllTasks() {
         return taskService.getAllTasks();
     }
 
